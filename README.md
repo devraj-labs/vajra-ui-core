@@ -1,4 +1,4 @@
-# vajra-core
+# Vajra UI Core
 
 Headless React Native layout primitives. No theme. No opinions. Just structure.
 
