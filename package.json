@@ -35,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devraj-labs/vajra-core.git"
+    "url": "https://github.com/devraj-labs/vajra-ui-core.git"
   },
-  "homepage": "https://github.com/devraj-labs/vajra-core#readme",
+  "homepage": "https://github.com/devraj-labs/vajra-ui-core#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=18.0.0",
