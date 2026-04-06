@@ -4,7 +4,20 @@
 
 ### Layout primitives for React Native.
 
-**`9 kB` &nbsp;·&nbsp; `0 dependencies` &nbsp;·&nbsp; `No theme` &nbsp;·&nbsp; `No provider` &nbsp;·&nbsp; `No opinions`**
+<table>
+  <tr>
+    <td align="center"><strong>9 kB</strong></td>
+    <td align="center"><strong>0</strong></td>
+    <td align="center"><strong>0</strong></td>
+    <td align="center"><strong>12</strong></td>
+  </tr>
+  <tr>
+    <td align="center">Package size</td>
+    <td align="center">Dependencies</td>
+    <td align="center">Providers needed</td>
+    <td align="center">Primitives</td>
+  </tr>
+</table>
 
 <br />
 
