@@ -83,7 +83,7 @@ export function RowExample() {
               >
                 Software engineer · Open source · Building @vajra-ui
               </CoreText>
-              <CoreText fontSize={12} color={colors.textDisabled}>
+              <CoreText fontSize={12} color={colors.textSecondary}>
                 📍 Bengaluru, India
               </CoreText>
             </Col>

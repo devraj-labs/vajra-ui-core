@@ -4,68 +4,38 @@ export type Contact = {
   id: string;
   name: string;
   role: string;
-  initials: string;
-  color: string;
   online: boolean;
 };
 
+export const getInitials = (name: string) =>
+  name
+    .split(' ')
+    .map(w => w[0])
+    .join('')
+    .toUpperCase();
+
+const AVATAR_COLORS = [
+  colors.primary,
+  colors.success,
+  colors.warning,
+  colors.error,
+];
+
+export const getAvatarColor = (name: string) =>
+  AVATAR_COLORS[name.charCodeAt(0) % AVATAR_COLORS.length];
+
 export const CONTACTS: Contact[] = [
-  {
-    id: '1',
-    name: 'Alice Kim',
-    role: 'Designer',
-    initials: 'AK',
-    color: colors.primary,
-    online: true,
-  },
-  {
-    id: '2',
-    name: 'Alex Morgan',
-    role: 'Engineer',
-    initials: 'AM',
-    color: colors.success,
-    online: false,
-  },
-  {
-    id: '3',
-    name: 'Ben Nakamura',
-    role: 'PM',
-    initials: 'BN',
-    color: colors.warning,
-    online: true,
-  },
-  {
-    id: '4',
-    name: 'Clara Osei',
-    role: 'Designer',
-    initials: 'CO',
-    color: colors.error,
-    online: true,
-  },
-  {
-    id: '5',
-    name: 'Dan Park',
-    role: 'Engineer',
-    initials: 'DP',
-    color: colors.primary,
-    online: false,
-  },
-  {
-    id: '6',
-    name: 'Eva Reyes',
-    role: 'QA',
-    initials: 'ER',
-    color: colors.success,
-    online: false,
-  },
-  {
-    id: '7',
-    name: 'Frank Singh',
-    role: 'DevOps',
-    initials: 'FS',
-    color: colors.warning,
-    online: true,
-  },
+  { id: '1', name: 'Rishav', role: 'Developer', online: true },
+  { id: '2', name: 'Om', role: 'Engineer', online: true },
+  { id: '3', name: 'Nikhil', role: 'Law', online: true },
+  { id: '4', name: 'Aviral', role: 'Engineer', online: false },
+  { id: '5', name: 'Ayush', role: 'Engineer', online: false },
+  { id: '6', name: 'Aishika', role: 'Engineer', online: false },
+  { id: '8', name: 'Romit', role: 'DevOps', online: false },
+  { id: '9', name: 'Abhishek', role: 'DevOps', online: false },
+  { id: '10', name: 'Himanshu', role: 'TL', online: false },
+  { id: '11', name: 'Ankit', role: 'Engineer', online: false },
+  { id: '12', name: 'Rishi', role: 'Engineer', online: false },
 ];
 
 export const grouped = CONTACTS.reduce<Record<string, Contact[]>>((acc, c) => {

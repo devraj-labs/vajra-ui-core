@@ -59,8 +59,8 @@ export function BoxExample() {
                 borderColor={colors.border}
                 gap={6}
               >
-                <Box w={40} h={36} rounded={8} bg={s.bg} align="center" justify="center">
-                  <CoreText fontSize={14} color={s.color} fontWeight="700">{s.change}</CoreText>
+                <Box w={36} h={32} rounded={8} bg={s.bg} align="center" justify="center">
+                  <CoreText fontSize={10} color={s.color} fontWeight="700">{s.change}</CoreText>
                 </Box>
                 <CoreText fontSize={18} fontWeight="700" color={colors.textPrimary}>{s.value}</CoreText>
                 <CoreText fontSize={11} color={colors.textSecondary}>{s.label}</CoreText>

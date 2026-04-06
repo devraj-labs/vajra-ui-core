@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ScrollView } from 'react-native';
 import { Box, Row, Col, Separator, CoreText, CorePressable } from '@devraj-labs/vajra-ui-core';
 import { colors } from '../../colors';
-import { CONTACTS, grouped } from './data';
+import { CONTACTS, grouped, getInitials, getAvatarColor } from './data';
 
 export function SeparatorExample() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -41,8 +41,8 @@ export function SeparatorExample() {
           <Row gap={16} align="center">
             {CONTACTS.filter((c) => c.online).map((c) => (
               <Col key={c.id} align="center" gap={4}>
-                <Box w={52} h={52} rounded={26} bg={c.color} align="center" justify="center" borderWidth={2} borderColor={colors.success}>
-                  <CoreText fontSize={17} fontWeight="700" color={colors.textInverse}>{c.initials}</CoreText>
+                <Box w={52} h={52} rounded={26} bg={getAvatarColor(c.name)} align="center" justify="center" borderWidth={2} borderColor={colors.success}>
+                  <CoreText fontSize={17} fontWeight="700" color={colors.textInverse}>{getInitials(c.name)}</CoreText>
                 </Box>
                 <CoreText fontSize={11} color={colors.textSecondary}>{c.name.split(' ')[0]}</CoreText>
               </Col>
@@ -56,7 +56,7 @@ export function SeparatorExample() {
             <Box flex={1}>
               <Separator color={colors.border} variant="dashed" />
             </Box>
-            <CoreText fontSize={11} fontWeight="600" color={colors.textDisabled} transform="uppercase" letterSpacing={0.8}>
+            <CoreText fontSize={11} fontWeight="600" color={colors.textSecondary} transform="uppercase" letterSpacing={0.8}>
               All contacts
             </CoreText>
             <Box flex={1}>
@@ -84,8 +84,8 @@ export function SeparatorExample() {
                       bg={selected === contact.id ? colors.primaryLight : colors.surface}
                     >
                       <Row align="center" gap={12} px={16} py={13}>
-                        <Box w={44} h={44} rounded={22} bg={contact.color} align="center" justify="center">
-                          <CoreText fontSize={15} fontWeight="700" color={colors.textInverse}>{contact.initials}</CoreText>
+                        <Box w={44} h={44} rounded={22} bg={getAvatarColor(contact.name)} align="center" justify="center">
+                          <CoreText fontSize={15} fontWeight="700" color={colors.textInverse}>{getInitials(contact.name)}</CoreText>
                         </Box>
                         <Col flex={1} gap={2}>
                           <CoreText fontSize={14} fontWeight="500" color={colors.textPrimary}>{contact.name}</CoreText>

@@ -10,12 +10,23 @@ const pkgRoot = path.resolve(__dirname, '..', '..');
  * package root to extraNodeModules so that any React / React-Native
  * imports inside the local package resolve to the app's own copies and
  * do not load a second instance.
+ *
+ * IMPORTANT: vajra-ui-core has its own node_modules (devDependencies) which
+ * includes react. We must block Metro from ever resolving from that folder,
+ * otherwise two copies of React end up in the bundle and hooks crash.
  */
 const config = {
   // Watch the workspace root as well as the app directory
   watchFolders: [pkgRoot],
 
   resolver: {
+    // Block the local package's node_modules so Metro never picks up its
+    // copy of react / react-native instead of the app's copy.
+    blockList: [
+      new RegExp(
+        `^${path.resolve(pkgRoot, 'node_modules').replace(/[/\\]/g, '/')}.*`
+      ),
+    ],
     // Ensure a single copy of react and react-native is used
     extraNodeModules: {
       react: path.resolve(__dirname, 'node_modules/react'),

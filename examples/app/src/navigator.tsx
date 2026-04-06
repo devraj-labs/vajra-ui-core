@@ -45,19 +45,71 @@ export function Navigator() {
         contentStyle: { backgroundColor: colors.textInverse },
       }}
     >
-      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Vajra UI Core' }} />
-      <Stack.Screen name="BoxExample" component={BoxExample} options={{ title: 'Box' }} />
-      <Stack.Screen name="RowExample" component={RowExample} options={{ title: 'Row' }} />
-      <Stack.Screen name="ColExample" component={ColExample} options={{ title: 'Col' }} />
-      <Stack.Screen name="CenterExample" component={CenterExample} options={{ title: 'Center' }} />
-      <Stack.Screen name="AbsoluteCenterExample" component={AbsoluteCenterExample} options={{ title: 'AbsoluteCenter' }} />
-      <Stack.Screen name="SpacerExample" component={SpacerExample} options={{ title: 'Spacer' }} />
-      <Stack.Screen name="SeparatorExample" component={SeparatorExample} options={{ title: 'Separator' }} />
-      <Stack.Screen name="CoreTextExample" component={CoreTextExample} options={{ title: 'CoreText' }} />
-      <Stack.Screen name="CoreTextInputExample" component={CoreTextInputExample} options={{ title: 'CoreTextInput' }} />
-      <Stack.Screen name="CorePressableExample" component={CorePressableExample} options={{ title: 'CorePressable' }} />
-      <Stack.Screen name="GridExample" component={GridExample} options={{ title: 'Grid' }} />
-      <Stack.Screen name="UseDimensionsExample" component={UseDimensionsExample} options={{ title: 'useDimensions' }} />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: '⚡️ Vajra Core' }}
+      />
+      <Stack.Screen
+        name="BoxExample"
+        component={BoxExample}
+        options={{ title: 'Box' }}
+      />
+      <Stack.Screen
+        name="RowExample"
+        component={RowExample}
+        options={{ title: 'Row' }}
+      />
+      <Stack.Screen
+        name="ColExample"
+        component={ColExample}
+        options={{ title: 'Col' }}
+      />
+      <Stack.Screen
+        name="CenterExample"
+        component={CenterExample}
+        options={{ title: 'Center' }}
+      />
+      <Stack.Screen
+        name="AbsoluteCenterExample"
+        component={AbsoluteCenterExample}
+        options={{ title: 'AbsoluteCenter' }}
+      />
+      <Stack.Screen
+        name="SpacerExample"
+        component={SpacerExample}
+        options={{ title: 'Spacer' }}
+      />
+      <Stack.Screen
+        name="SeparatorExample"
+        component={SeparatorExample}
+        options={{ title: 'Separator' }}
+      />
+      <Stack.Screen
+        name="CoreTextExample"
+        component={CoreTextExample}
+        options={{ title: 'CoreText' }}
+      />
+      <Stack.Screen
+        name="CoreTextInputExample"
+        component={CoreTextInputExample}
+        options={{ title: 'CoreTextInput' }}
+      />
+      <Stack.Screen
+        name="CorePressableExample"
+        component={CorePressableExample}
+        options={{ title: 'CorePressable' }}
+      />
+      <Stack.Screen
+        name="GridExample"
+        component={GridExample}
+        options={{ title: 'Grid' }}
+      />
+      <Stack.Screen
+        name="UseDimensionsExample"
+        component={UseDimensionsExample}
+        options={{ title: 'useDimensions' }}
+      />
     </Stack.Navigator>
   );
 }
