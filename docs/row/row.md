@@ -1,0 +1,24 @@
+# Row
+
+`Box` preset with `direction="row"` applied automatically. Use it whenever you need a horizontal arrangement — icon + label, avatar + name, stat row, tag chips, etc.
+
+## Preview
+
+![Row example](./row-example.png)
+
+> Screenshot from [`examples/app/src/screens/row-example.tsx`](../../examples/app/src/screens/row-example.tsx)
+
+## Usage
+
+```tsx
+import { Row } from '@devraj-labs/vajra-ui-core';
+
+<Row align="center" gap={12}>
+  <Avatar />
+  <Name />
+</Row>
+```
+
+## API
+
+Accepts all [`Box` props](../box/box.md). The `direction` prop is fixed to `"row"` and cannot be overridden.

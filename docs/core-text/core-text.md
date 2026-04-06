@@ -1,0 +1,39 @@
+# CoreText
+
+Headless `Text` component with typography shorthand props. No default font, size, or colour — all styling is explicit.
+
+## Preview
+
+![CoreText example](./core-text-example.png)
+
+> Screenshot from [`examples/app/src/screens/core-text-example.tsx`](../../examples/app/src/screens/core-text-example.tsx)
+
+## Usage
+
+```tsx
+import { CoreText } from '@devraj-labs/vajra-ui-core';
+
+<CoreText fontSize={16} fontWeight="600" color="#111" lineHeight={24}>
+  Hello
+</CoreText>
+```
+
+## API
+
+| Prop | Type | Maps to |
+|------|------|---------|
+| `fontSize` | `number` | `fontSize` |
+| `lineHeight` | `number` | `lineHeight` |
+| `fontWeight` | `TextStyle['fontWeight']` | `fontWeight` |
+| `fontFamily` | `string` | `fontFamily` |
+| `letterSpacing` | `number` | `letterSpacing` |
+| `color` | `string` | `color` |
+| `align` | `TextStyle['textAlign']` | `textAlign` |
+| `decoration` | `TextStyle['textDecorationLine']` | `textDecorationLine` |
+| `transform` | `TextStyle['textTransform']` | `textTransform` |
+| `style` | `TextStyle \| TextStyle[]` | Merged last |
+| `children` | `React.ReactNode` | Text content |
+
+Also accepts all native `TextProps`.
+
+> `CoreText` does **not** accept Box layout props (`flex`, `w`, `h`, etc.). Wrap it in a `Box` when layout control is needed.
