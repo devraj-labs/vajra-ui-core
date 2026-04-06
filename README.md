@@ -9,7 +9,7 @@ Built to be consumed by `vajra-ui` or used standalone when you want layout build
 ## Install
 
 ```sh
-yarn add vajra-core
+yarn add @devraj-labs/vajra-ui-core
 ```
 
 `react` and `react-native` are peer dependencies.
@@ -18,168 +18,53 @@ yarn add vajra-core
 
 ## Primitives
 
-### `Box`
-
-The foundation. A `View` with shorthand style props.
-
-```tsx
-<Box w="100%" p={16} bg="#fff" rounded={8} direction="row" align="center" gap={8}>
-  {children}
-</Box>
-```
-
-**Props:** `w`, `h`, `minW`, `maxW`, `minH`, `maxH`, `bg`, `borderColor`, `borderWidth`, `borderTopWidth`, `borderBottomWidth`, `borderLeftWidth`, `borderRightWidth`, `rounded`, `roundedT`, `roundedB`, `roundedL`, `roundedR`, `flex`, `gap`, `justify`, `align`, `direction`, `wrap`, `m`, `mx`, `my`, `mt`, `mb`, `ml`, `mr`, `p`, `px`, `py`, `pt`, `pb`, `pl`, `pr`, `position`, `top`, `bottom`, `left`, `right` — plus all native `ViewProps`.
-
----
-
-### `Row`
-
-`Box` with `direction="row"` preset.
-
-```tsx
-<Row align="center" gap={12}>
-  <Icon />
-  <Label />
-</Row>
-```
+| Component | Docs | Purpose |
+|-----------|------|---------|
+| `Box` | [docs/box](./docs/box/box.md) | Foundation `View` with shorthand style props |
+| `Row` | [docs/row](./docs/row/row.md) | `Box` preset — `direction="row"` |
+| `Col` | [docs/col](./docs/col/col.md) | `Box` preset — `direction="column"` |
+| `Center` | [docs/center](./docs/center/center.md) | `Box` preset — centred on both axes |
+| `AbsoluteCenter` | [docs/absolute-center](./docs/absolute-center/absolute-center.md) | Absolutely fills parent and centres children |
+| `Spacer` | [docs/spacer](./docs/spacer/spacer.md) | Fixed-size empty space |
+| `Separator` | [docs/separator](./docs/separator/separator.md) | Horizontal or vertical line divider |
+| `CoreText` | [docs/core-text](./docs/core-text/core-text.md) | Headless `Text` with typography props |
+| `CoreTextInput` | [docs/core-text-input](./docs/core-text-input/core-text-input.md) | Headless `TextInput` with layout + typography props |
+| `CorePressable` | [docs/core-pressable](./docs/core-pressable/core-pressable.md) | Headless `TouchableOpacity` with layout props |
+| `Grid` | [docs/grid](./docs/grid/grid.md) | Compound responsive grid (`Grid.Root` + `Grid.Item`) |
+| `useDimensions` | [docs/use-dimensions](./docs/use-dimensions/use-dimensions.md) | Screen-aware dimension utilities hook |
 
 ---
 
-### `Col`
+## Examples
 
-`Box` with `direction="column"` preset.
+A runnable React Native CLI app lives in [`examples/app/`](./examples/app/). It renders every component in a dedicated screen navigated via a native stack.
 
-```tsx
-<Col gap={8} p={16}>
-  <Title />
-  <Subtitle />
-</Col>
+```sh
+cd examples/app
+
+# iOS
+bundle exec pod install --project-directory=ios
+npx react-native run-ios
+
+# Android
+npx react-native run-android
 ```
 
----
-
-### `Center`
-
-`Box` with `align="center"` and `justify="center"` preset.
-
-```tsx
-<Center flex={1}>
-  <Spinner />
-</Center>
-```
-
----
-
-### `AbsoluteCenter`
-
-Fills parent absolutely and centers its children.
-
-```tsx
-<AbsoluteCenter>
-  <Overlay />
-</AbsoluteCenter>
-```
-
----
-
-### `Grid`
-
-Compound component for responsive grid layouts. Uses screen width to calculate column widths.
-
-```tsx
-<Grid.Root gap={8} columns={2}>
-  <Grid.Item span={1} columns={2} colGap={8} screenPadding={16}>
-    <Card />
-  </Grid.Item>
-  <Grid.Item span={1} columns={2} colGap={8} screenPadding={16}>
-    <Card />
-  </Grid.Item>
-</Grid.Root>
-```
-
----
-
-### `CoreText`
-
-Headless `Text` with typography shorthand props.
-
-```tsx
-<CoreText fontSize={16} fontWeight="600" color="#111" lineHeight={24}>
-  Hello
-</CoreText>
-```
-
-**Props:** `fontSize`, `lineHeight`, `fontWeight`, `fontFamily`, `letterSpacing`, `color`, `align`, `decoration`, `transform` — plus all native `TextProps`.
-
----
-
-### `CoreTextInput`
-
-Headless `TextInput` with box layout props and typography props.
-
-```tsx
-<CoreTextInput
-  p={12}
-  rounded={8}
-  borderWidth={1}
-  borderColor="#ccc"
-  fontSize={14}
-  color="#000"
-  placeholder="Type here..."
-  placeholderColor="#aaa"
-/>
-```
-
----
-
-### `CorePressable`
-
-Headless `Pressable` with box layout props and a built-in press opacity.
-
-```tsx
-<CorePressable onPress={handlePress} bg="#000" rounded={8} p={12} opacity={0.6}>
-  <CoreText color="#fff">Press me</CoreText>
-</CorePressable>
-```
-
-`opacity` controls the pressed-state opacity (default `0.7`).
-
----
-
-### `Spacer`
-
-Fixed-size empty space.
-
-```tsx
-<Spacer h={16} />
-<Spacer w={8} />
-```
-
----
-
-### `Separator`
-
-A thin line divider.
-
-```tsx
-<Separator orientation="horizontal" thickness={1} color="#e0e0e0" variant="solid" />
-<Separator orientation="vertical" thickness={1} color="#e0e0e0" />
-```
-
----
-
-## Hooks
-
-### `useDimensions`
-
-Screen-aware dimension utilities. Useful for building responsive layouts.
-
-```tsx
-const { width, height, contentWidth, getItemWidth } = useDimensions(screenPadding);
-
-// width of one column in a 3-column grid with 8px gaps
-const colWidth = getItemWidth(3, 8);
-```
+| Screen | Source |
+|--------|--------|
+| Home | [`examples/app/src/screens/home-screen.tsx`](./examples/app/src/screens/home-screen.tsx) |
+| Box | [`examples/app/src/screens/box-example.tsx`](./examples/app/src/screens/box-example.tsx) |
+| Row | [`examples/app/src/screens/row-example.tsx`](./examples/app/src/screens/row-example.tsx) |
+| Col | [`examples/app/src/screens/col-example.tsx`](./examples/app/src/screens/col-example.tsx) |
+| Center | [`examples/app/src/screens/center-example.tsx`](./examples/app/src/screens/center-example.tsx) |
+| AbsoluteCenter | [`examples/app/src/screens/absolute-center-example.tsx`](./examples/app/src/screens/absolute-center-example.tsx) |
+| Spacer | [`examples/app/src/screens/spacer-example.tsx`](./examples/app/src/screens/spacer-example.tsx) |
+| Separator | [`examples/app/src/screens/separator-example.tsx`](./examples/app/src/screens/separator-example.tsx) |
+| CoreText | [`examples/app/src/screens/core-text-example.tsx`](./examples/app/src/screens/core-text-example.tsx) |
+| CoreTextInput | [`examples/app/src/screens/core-text-input-example.tsx`](./examples/app/src/screens/core-text-input-example.tsx) |
+| CorePressable | [`examples/app/src/screens/core-pressable-example.tsx`](./examples/app/src/screens/core-pressable-example.tsx) |
+| Grid | [`examples/app/src/screens/grid-example.tsx`](./examples/app/src/screens/grid-example.tsx) |
+| useDimensions | [`examples/app/src/screens/use-dimensions-example.tsx`](./examples/app/src/screens/use-dimensions-example.tsx) |
 
 ---
 
