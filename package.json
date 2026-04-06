@@ -11,8 +11,7 @@
     }
   },
   "files": [
-    "dist",
-    "docs"
+    "dist"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.build.json",

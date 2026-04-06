@@ -2,17 +2,38 @@
 
 # Vajra UI Core
 
-**Headless React Native layout primitives.**
-No theme. No opinions. Just structure.
+### Layout primitives for React Native.
 
-Built to be consumed by `vajra-ui` or used standalone when you want layout building blocks without a design system attached.
+**`9 kB` &nbsp;·&nbsp; `0 dependencies` &nbsp;·&nbsp; `No theme` &nbsp;·&nbsp; `No provider` &nbsp;·&nbsp; `No opinions`**
+
+<br />
+
+[![npm version](https://img.shields.io/npm/v/@devraj-labs/vajra-ui-core)](https://www.npmjs.com/package/@devraj-labs/vajra-ui-core)
+[![bundle size](https://img.shields.io/bundlephobia/min/@devraj-labs/vajra-ui-core)](https://bundlephobia.com/package/@devraj-labs/vajra-ui-core)
+[![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://www.npmjs.com/package/@devraj-labs/vajra-ui-core)
+[![license](https://img.shields.io/npm/l/@devraj-labs/vajra-ui-core)](./LICENSE)
 
 <br />
 
 <img src="./docs/box/box-example.png" height="500" />&nbsp;<img src="./docs/row/row-example.png" height="500" />&nbsp;<img src="./docs/col/col-example.png" height="500" />
-<!-- &nbsp;<img src="./docs/center/center-example.png" height="500" /> &nbsp;<img src="./docs/absolute-center/absolute-center-example.png" height="400" /> &nbsp;<img src="./docs/grid/grid-example.png" height="400" />&nbsp;<img src="./docs/core-text/core-text-example.png" height="400" />&nbsp;<img src="./docs/core-text-input/core-text-input-example.png" height="400" />&nbsp;<img src="./docs/core-pressable/core-pressable-example.png" height="400" />&nbsp;<img src="./docs/spacer/spacer-example.png" height="400" />&nbsp;<img src="./docs/separator/separator-example.png" height="400" />&nbsp;<img src="./docs/use-dimensions/use-dimensions-example.png" height="400" /> -->
 
 </div>
+
+---
+
+## Why
+
+Raw RN layout is verbose. Design systems fix that but ship a theme, a provider, and a dependency tree you didn't ask for.
+
+Vajra UI Core is neither. It's a thin prop layer over the primitives you're already using — `View`, `Text`, `TouchableOpacity`. The whole thing is 9 kB and pulls in nothing. Drop it in, style with your own system, done.
+
+```tsx
+// before
+<View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, gap: 8 }}>
+
+// after
+<Row align="center" px={16} gap={8}>
+```
 
 ---
 
@@ -22,32 +43,79 @@ Built to be consumed by `vajra-ui` or used standalone when you want layout build
 yarn add @devraj-labs/vajra-ui-core
 ```
 
-`react` and `react-native` are peer dependencies.
+`react` and `react-native` are peer dependencies. Nothing else is.
 
 ---
 
 ## Primitives
 
-| Component | Docs | Purpose |
-|-----------|------|---------|
-| `Box` | [docs/box](./docs/box/box.md) | Foundation `View` with shorthand style props |
-| `Row` | [docs/row](./docs/row/row.md) | `Box` preset — `direction="row"` |
-| `Col` | [docs/col](./docs/col/col.md) | `Box` preset — `direction="column"` |
-| `Center` | [docs/center](./docs/center/center.md) | `Box` preset — centred on both axes |
-| `AbsoluteCenter` | [docs/absolute-center](./docs/absolute-center/absolute-center.md) | Absolutely fills parent and centres children |
-| `Spacer` | [docs/spacer](./docs/spacer/spacer.md) | Fixed-size empty space |
-| `Separator` | [docs/separator](./docs/separator/separator.md) | Horizontal or vertical line divider |
-| `CoreText` | [docs/core-text](./docs/core-text/core-text.md) | Headless `Text` with typography props |
-| `CoreTextInput` | [docs/core-text-input](./docs/core-text-input/core-text-input.md) | Headless `TextInput` with layout + typography props |
-| `CorePressable` | [docs/core-pressable](./docs/core-pressable/core-pressable.md) | Headless `TouchableOpacity` with layout props |
-| `Grid` | [docs/grid](./docs/grid/grid.md) | Compound responsive grid (`Grid.Root` + `Grid.Item`) |
-| `useDimensions` | [docs/use-dimensions](./docs/use-dimensions/use-dimensions.md) | Screen-aware dimension utilities hook |
+| Component | Purpose |
+|-----------|---------|
+| `Box` | Foundation `View` with shorthand layout + spacing props |
+| `Row` | `Box` with `direction="row"` |
+| `Col` | `Box` with `direction="column"` |
+| `Center` | `Box` centered on both axes |
+| `AbsoluteCenter` | Fills parent absolutely and centers children |
+| `Spacer` | Fixed-size gap |
+| `Separator` | Horizontal or vertical divider line |
+| `CoreText` | Headless `Text` with typography props |
+| `CoreTextInput` | Headless `TextInput` with layout + typography props |
+| `CorePressable` | `TouchableOpacity` with full layout prop support |
+| `Grid` | Compound responsive grid — `Grid.Root` + `Grid.Item` |
+| `useDimensions` | Screen-aware dimension utilities |
+
+---
+
+## Usage
+
+```tsx
+import { Box, Row, Col, CoreText, CorePressable } from '@devraj-labs/vajra-ui-core';
+
+export function Card() {
+  return (
+    <Box bg="#fff" rounded={12} p={16} gap={12}>
+      <CoreText fontSize={18} fontWeight="600">
+        Hello
+      </CoreText>
+      <Row gap={8} align="center">
+        <Box w={40} h={40} rounded={20} bg="#eee" />
+        <Col gap={2}>
+          <CoreText fontSize={14}>Name</CoreText>
+          <CoreText fontSize={12} color="#888">Subtitle</CoreText>
+        </Col>
+      </Row>
+      <CorePressable bg="#000" rounded={8} py={12} align="center" onPress={() => {}}>
+        <CoreText color="#fff" fontWeight="600">Tap me</CoreText>
+      </CorePressable>
+    </Box>
+  );
+}
+```
+
+---
+
+## Docs
+
+| Component | |
+|-----------|--|
+| `Box` | [docs/box](./docs/box/box.md) |
+| `Row` | [docs/row](./docs/row/row.md) |
+| `Col` | [docs/col](./docs/col/col.md) |
+| `Center` | [docs/center](./docs/center/center.md) |
+| `AbsoluteCenter` | [docs/absolute-center](./docs/absolute-center/absolute-center.md) |
+| `Spacer` | [docs/spacer](./docs/spacer/spacer.md) |
+| `Separator` | [docs/separator](./docs/separator/separator.md) |
+| `CoreText` | [docs/core-text](./docs/core-text/core-text.md) |
+| `CoreTextInput` | [docs/core-text-input](./docs/core-text-input/core-text-input.md) |
+| `CorePressable` | [docs/core-pressable](./docs/core-pressable/core-pressable.md) |
+| `Grid` | [docs/grid](./docs/grid/grid.md) |
+| `useDimensions` | [docs/use-dimensions](./docs/use-dimensions/use-dimensions.md) |
 
 ---
 
 ## Examples
 
-A runnable React Native CLI app lives in [`examples/app/`](./examples/app/). It renders every component in a dedicated screen navigated via a native stack.
+A runnable React Native CLI app lives in [`examples/app/`](./examples/app/).
 
 ```sh
 cd examples/app
@@ -59,22 +127,6 @@ npx react-native run-ios
 # Android
 npx react-native run-android
 ```
-
-| Screen | Source |
-|--------|--------|
-| Home | [`examples/app/src/screens/home-screen.tsx`](./examples/app/src/screens/home-screen.tsx) |
-| Box | [`examples/app/src/screens/box-example/index.tsx`](./examples/app/src/screens/box-example/index.tsx) |
-| Row | [`examples/app/src/screens/row-example/index.tsx`](./examples/app/src/screens/row-example/index.tsx) |
-| Col | [`examples/app/src/screens/col-example/index.tsx`](./examples/app/src/screens/col-example/index.tsx) |
-| Center | [`examples/app/src/screens/center-example/index.tsx`](./examples/app/src/screens/center-example/index.tsx) |
-| AbsoluteCenter | [`examples/app/src/screens/absolute-center-example/index.tsx`](./examples/app/src/screens/absolute-center-example/index.tsx) |
-| Spacer | [`examples/app/src/screens/spacer-example/index.tsx`](./examples/app/src/screens/spacer-example/index.tsx) |
-| Separator | [`examples/app/src/screens/separator-example/index.tsx`](./examples/app/src/screens/separator-example/index.tsx) |
-| CoreText | [`examples/app/src/screens/core-text-example/index.tsx`](./examples/app/src/screens/core-text-example/index.tsx) |
-| CoreTextInput | [`examples/app/src/screens/core-text-input-example/index.tsx`](./examples/app/src/screens/core-text-input-example/index.tsx) |
-| CorePressable | [`examples/app/src/screens/core-pressable-example/index.tsx`](./examples/app/src/screens/core-pressable-example/index.tsx) |
-| Grid | [`examples/app/src/screens/grid-example/index.tsx`](./examples/app/src/screens/grid-example/index.tsx) |
-| useDimensions | [`examples/app/src/screens/use-dimensions-example/index.tsx`](./examples/app/src/screens/use-dimensions-example/index.tsx) |
 
 ---
 
