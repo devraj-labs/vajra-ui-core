@@ -4,9 +4,13 @@ A thin line divider. Supports horizontal and vertical orientations, solid / dash
 
 ## Preview
 
-![Separator example](./separator-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/separator-example.tsx`](../../examples/app/src/screens/separator-example.tsx)
+<img src="./separator-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/separator-example/index.tsx`](../../examples/app/src/screens/separator-example/index.tsx)
 
 ## Usage
 

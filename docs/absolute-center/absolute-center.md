@@ -4,9 +4,13 @@ Fills its parent absolutely (`top: 0, bottom: 0, left: 0, right: 0`) and centres
 
 ## Preview
 
-![AbsoluteCenter example](./absolute-center-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/absolute-center-example.tsx`](../../examples/app/src/screens/absolute-center-example.tsx)
+<img src="./absolute-center-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/absolute-center-example/index.tsx`](../../examples/app/src/screens/absolute-center-example/index.tsx)
 
 ## Usage
 

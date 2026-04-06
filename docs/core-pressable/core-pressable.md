@@ -4,9 +4,13 @@ Headless `TouchableOpacity` with Box layout props. No default visual — all sty
 
 ## Preview
 
-![CorePressable example](./core-pressable-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/core-pressable-example.tsx`](../../examples/app/src/screens/core-pressable-example.tsx)
+<img src="./core-pressable-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/core-pressable-example/index.tsx`](../../examples/app/src/screens/core-pressable-example/index.tsx)
 
 ## Usage
 

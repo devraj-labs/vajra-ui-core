@@ -24,7 +24,7 @@ export function SpacerExample() {
               <CoreText fontSize={13} fontWeight="600" color={colors.textPrimary}>Rishav Jha</CoreText>
               <CoreText fontSize={11} color={colors.textSecondary}>Apr 6, 2026 · 6 min read</CoreText>
             </Col>
-            <Spacer flex={1} />
+            <Box flex={1} />
             <CorePressable onPress={() => setBookmarked((b) => !b)}>
               <CoreText fontSize={20}>{bookmarked ? '🔖' : '🏷️'}</CoreText>
             </CorePressable>
@@ -77,9 +77,10 @@ export function SpacerExample() {
 
           <Spacer h={20} />
           <Box bg={colors.surfaceAlt} rounded={10} p={16} borderWidth={1} borderColor={colors.border}>
-            <CoreText fontSize={12} color={colors.primary} fontWeight="600" style={{ marginBottom: 8 }}>
+            <CoreText fontSize={12} color={colors.primary} fontWeight="600">
               Example
             </CoreText>
+            <Spacer h={12} />
             {CODE_LINES.map((line, i) => (
               <CoreText key={i} fontSize={12} color={colors.textPrimary} lineHeight={20} style={{ fontVariant: ['tabular-nums'] }}>
                 {line}
@@ -131,7 +132,7 @@ export function SpacerExample() {
                 </CoreText>
               </Row>
             </CorePressable>
-            <Spacer flex={1} />
+            <Box flex={1} />
             <CorePressable bg={colors.primary} px={16} py={8} rounded={20}>
               <CoreText fontSize={13} fontWeight="600" color={colors.textInverse}>Follow author</CoreText>
             </CorePressable>

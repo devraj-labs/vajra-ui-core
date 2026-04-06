@@ -4,9 +4,13 @@
 
 ## Preview
 
-![Col example](./col-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/col-example.tsx`](../../examples/app/src/screens/col-example.tsx)
+<img src="./col-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/col-example/index.tsx`](../../examples/app/src/screens/col-example/index.tsx)
 
 ## Usage
 

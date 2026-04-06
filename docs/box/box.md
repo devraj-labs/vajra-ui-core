@@ -4,9 +4,13 @@ Foundation component. A `View` wrapper with shorthand style props — covers dim
 
 ## Preview
 
-![Box example](./box-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/box-example.tsx`](../../examples/app/src/screens/box-example.tsx)
+<img src="./box-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/box-example/index.tsx`](../../examples/app/src/screens/box-example/index.tsx)
 
 ## Usage
 

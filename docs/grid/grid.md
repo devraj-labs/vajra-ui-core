@@ -4,9 +4,13 @@ Compound component (`Grid.Root` + `Grid.Item`) for responsive grid layouts. `Gri
 
 ## Preview
 
-![Grid example](./grid-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/grid-example.tsx`](../../examples/app/src/screens/grid-example.tsx)
+<img src="./grid-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/grid-example/index.tsx`](../../examples/app/src/screens/grid-example/index.tsx)
 
 ## Usage
 

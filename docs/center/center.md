@@ -4,9 +4,13 @@
 
 ## Preview
 
-![Center example](./center-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/center-example.tsx`](../../examples/app/src/screens/center-example.tsx)
+<img src="./center-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/center-example/index.tsx`](../../examples/app/src/screens/center-example/index.tsx)
 
 ## Usage
 

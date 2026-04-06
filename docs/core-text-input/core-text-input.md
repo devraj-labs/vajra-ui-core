@@ -6,9 +6,13 @@ Supports `ref` forwarding.
 
 ## Preview
 
-![CoreTextInput example](./core-text-input-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/core-text-input-example.tsx`](../../examples/app/src/screens/core-text-input-example.tsx)
+<img src="./core-text-input-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/core-text-input-example/index.tsx`](../../examples/app/src/screens/core-text-input-example/index.tsx)
 
 ## Usage
 

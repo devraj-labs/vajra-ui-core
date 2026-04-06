@@ -4,9 +4,13 @@
 
 ## Preview
 
-![Row example](./row-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/row-example.tsx`](../../examples/app/src/screens/row-example.tsx)
+<img src="./row-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/row-example/index.tsx`](../../examples/app/src/screens/row-example/index.tsx)
 
 ## Usage
 

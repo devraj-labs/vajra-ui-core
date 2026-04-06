@@ -4,9 +4,13 @@ Headless `Text` component with typography shorthand props. No default font, size
 
 ## Preview
 
-![CoreText example](./core-text-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/core-text-example.tsx`](../../examples/app/src/screens/core-text-example.tsx)
+<img src="./core-text-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/core-text-example/index.tsx`](../../examples/app/src/screens/core-text-example/index.tsx)
 
 ## Usage
 

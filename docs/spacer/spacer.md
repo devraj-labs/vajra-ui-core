@@ -4,9 +4,13 @@ A fixed-size empty `View` with no background or styling. Use it to add predictab
 
 ## Preview
 
-![Spacer example](./spacer-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/spacer-example.tsx`](../../examples/app/src/screens/spacer-example.tsx)
+<img src="./spacer-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/spacer-example/index.tsx`](../../examples/app/src/screens/spacer-example/index.tsx)
 
 ## Usage
 

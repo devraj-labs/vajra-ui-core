@@ -1,8 +1,18 @@
+<div align="center">
+
 # Vajra UI Core
 
-Headless React Native layout primitives. No theme. No opinions. Just structure.
+**Headless React Native layout primitives.**
+No theme. No opinions. Just structure.
 
 Built to be consumed by `vajra-ui` or used standalone when you want layout building blocks without a design system attached.
+
+<br />
+
+<img src="./docs/box/box-example.png" height="400" />&nbsp;<img src="./docs/row/row-example.png" height="400" />&nbsp;<img src="./docs/col/col-example.png" height="400" />&nbsp;<img src="./docs/center/center-example.png" height="400" />&nbsp;<img src="./docs/absolute-center/absolute-center-example.png" height="400" />
+<!-- &nbsp;<img src="./docs/grid/grid-example.png" height="400" />&nbsp;<img src="./docs/core-text/core-text-example.png" height="400" />&nbsp;<img src="./docs/core-text-input/core-text-input-example.png" height="400" />&nbsp;<img src="./docs/core-pressable/core-pressable-example.png" height="400" />&nbsp;<img src="./docs/spacer/spacer-example.png" height="400" />&nbsp;<img src="./docs/separator/separator-example.png" height="400" />&nbsp;<img src="./docs/use-dimensions/use-dimensions-example.png" height="400" /> -->
+
+</div>
 
 ---
 
@@ -53,18 +63,18 @@ npx react-native run-android
 | Screen | Source |
 |--------|--------|
 | Home | [`examples/app/src/screens/home-screen.tsx`](./examples/app/src/screens/home-screen.tsx) |
-| Box | [`examples/app/src/screens/box-example.tsx`](./examples/app/src/screens/box-example.tsx) |
-| Row | [`examples/app/src/screens/row-example.tsx`](./examples/app/src/screens/row-example.tsx) |
-| Col | [`examples/app/src/screens/col-example.tsx`](./examples/app/src/screens/col-example.tsx) |
-| Center | [`examples/app/src/screens/center-example.tsx`](./examples/app/src/screens/center-example.tsx) |
-| AbsoluteCenter | [`examples/app/src/screens/absolute-center-example.tsx`](./examples/app/src/screens/absolute-center-example.tsx) |
-| Spacer | [`examples/app/src/screens/spacer-example.tsx`](./examples/app/src/screens/spacer-example.tsx) |
-| Separator | [`examples/app/src/screens/separator-example.tsx`](./examples/app/src/screens/separator-example.tsx) |
-| CoreText | [`examples/app/src/screens/core-text-example.tsx`](./examples/app/src/screens/core-text-example.tsx) |
-| CoreTextInput | [`examples/app/src/screens/core-text-input-example.tsx`](./examples/app/src/screens/core-text-input-example.tsx) |
-| CorePressable | [`examples/app/src/screens/core-pressable-example.tsx`](./examples/app/src/screens/core-pressable-example.tsx) |
-| Grid | [`examples/app/src/screens/grid-example.tsx`](./examples/app/src/screens/grid-example.tsx) |
-| useDimensions | [`examples/app/src/screens/use-dimensions-example.tsx`](./examples/app/src/screens/use-dimensions-example.tsx) |
+| Box | [`examples/app/src/screens/box-example/index.tsx`](./examples/app/src/screens/box-example/index.tsx) |
+| Row | [`examples/app/src/screens/row-example/index.tsx`](./examples/app/src/screens/row-example/index.tsx) |
+| Col | [`examples/app/src/screens/col-example/index.tsx`](./examples/app/src/screens/col-example/index.tsx) |
+| Center | [`examples/app/src/screens/center-example/index.tsx`](./examples/app/src/screens/center-example/index.tsx) |
+| AbsoluteCenter | [`examples/app/src/screens/absolute-center-example/index.tsx`](./examples/app/src/screens/absolute-center-example/index.tsx) |
+| Spacer | [`examples/app/src/screens/spacer-example/index.tsx`](./examples/app/src/screens/spacer-example/index.tsx) |
+| Separator | [`examples/app/src/screens/separator-example/index.tsx`](./examples/app/src/screens/separator-example/index.tsx) |
+| CoreText | [`examples/app/src/screens/core-text-example/index.tsx`](./examples/app/src/screens/core-text-example/index.tsx) |
+| CoreTextInput | [`examples/app/src/screens/core-text-input-example/index.tsx`](./examples/app/src/screens/core-text-input-example/index.tsx) |
+| CorePressable | [`examples/app/src/screens/core-pressable-example/index.tsx`](./examples/app/src/screens/core-pressable-example/index.tsx) |
+| Grid | [`examples/app/src/screens/grid-example/index.tsx`](./examples/app/src/screens/grid-example/index.tsx) |
+| useDimensions | [`examples/app/src/screens/use-dimensions-example/index.tsx`](./examples/app/src/screens/use-dimensions-example/index.tsx) |
 
 ---
 

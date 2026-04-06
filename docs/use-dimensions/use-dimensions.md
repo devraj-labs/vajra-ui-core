@@ -4,9 +4,13 @@ Screen-aware dimension utilities. Pass a `screenPadding` value to get a `content
 
 ## Preview
 
-![useDimensions example](./use-dimensions-example.png)
+<div align="center">
 
-> Screenshot from [`examples/app/src/screens/use-dimensions-example.tsx`](../../examples/app/src/screens/use-dimensions-example.tsx)
+<img src="./use-dimensions-example.png" height="400" />
+
+</div>
+
+> Usage example & demo from [`examples/app/src/screens/use-dimensions-example/index.tsx`](../../examples/app/src/screens/use-dimensions-example/index.tsx)
 
 ## Usage
 
