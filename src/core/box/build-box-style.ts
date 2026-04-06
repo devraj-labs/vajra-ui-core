@@ -49,6 +49,7 @@ export const buildBoxStyle = (props: TBoxStyleProps): ViewStyle => {
     bottom,
     left,
     right,
+    overflow,
   } = props;
 
   return {
@@ -95,5 +96,6 @@ export const buildBoxStyle = (props: TBoxStyleProps): ViewStyle => {
     bottom,
     left,
     right,
+    overflow,
   };
 };

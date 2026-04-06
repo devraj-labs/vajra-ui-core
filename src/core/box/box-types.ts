@@ -36,6 +36,7 @@ type TPositionProps = {
   bottom?: DimensionValue;
   left?: DimensionValue;
   right?: DimensionValue;
+  overflow?: ViewStyle['overflow'];
 };
 
 type TFlexProps = {

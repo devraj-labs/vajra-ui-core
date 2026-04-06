@@ -46,6 +46,12 @@ export const Box = memo(
     pb,
     pl,
     pr,
+    position,
+    top,
+    bottom,
+    left,
+    right,
+    overflow,
     ...rest
   }: TBoxProps) => {
     return (
@@ -90,6 +96,12 @@ export const Box = memo(
             pb,
             pl,
             pr,
+            position,
+            top,
+            bottom,
+            left,
+            right,
+            overflow,
           }),
           style,
         ]}
