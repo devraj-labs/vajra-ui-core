@@ -9,8 +9,8 @@ Built to be consumed by `vajra-ui` or used standalone when you want layout build
 
 <br />
 
-<img src="./docs/box/box-example.png" height="500" />&nbsp;<img src="./docs/row/row-example.png" height="500" />&nbsp;<img src="./docs/col/col-example.png" height="500" />&nbsp;<img src="./docs/center/center-example.png" height="500" />
-<!-- &nbsp;<img src="./docs/absolute-center/absolute-center-example.png" height="400" /> &nbsp;<img src="./docs/grid/grid-example.png" height="400" />&nbsp;<img src="./docs/core-text/core-text-example.png" height="400" />&nbsp;<img src="./docs/core-text-input/core-text-input-example.png" height="400" />&nbsp;<img src="./docs/core-pressable/core-pressable-example.png" height="400" />&nbsp;<img src="./docs/spacer/spacer-example.png" height="400" />&nbsp;<img src="./docs/separator/separator-example.png" height="400" />&nbsp;<img src="./docs/use-dimensions/use-dimensions-example.png" height="400" /> -->
+<img src="./docs/box/box-example.png" height="500" />&nbsp;<img src="./docs/row/row-example.png" height="500" />&nbsp;<img src="./docs/col/col-example.png" height="500" />
+<!-- &nbsp;<img src="./docs/center/center-example.png" height="500" /> &nbsp;<img src="./docs/absolute-center/absolute-center-example.png" height="400" /> &nbsp;<img src="./docs/grid/grid-example.png" height="400" />&nbsp;<img src="./docs/core-text/core-text-example.png" height="400" />&nbsp;<img src="./docs/core-text-input/core-text-input-example.png" height="400" />&nbsp;<img src="./docs/core-pressable/core-pressable-example.png" height="400" />&nbsp;<img src="./docs/spacer/spacer-example.png" height="400" />&nbsp;<img src="./docs/separator/separator-example.png" height="400" />&nbsp;<img src="./docs/use-dimensions/use-dimensions-example.png" height="400" /> -->
 
 </div>
 
