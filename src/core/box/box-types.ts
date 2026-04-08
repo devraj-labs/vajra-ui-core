@@ -1,5 +1,7 @@
 import { DimensionValue, ViewProps, ViewStyle } from 'react-native';
 
+import { TSpacingProps } from '../../types';
+
 type TDimensionProps = {
   w?: DimensionValue;
   h?: DimensionValue;
@@ -46,23 +48,6 @@ type TFlexProps = {
   align?: ViewStyle['alignItems'];
   direction?: ViewStyle['flexDirection'];
   wrap?: ViewStyle['flexWrap'];
-};
-
-type TSpacingProps = {
-  m?: number;
-  mx?: number;
-  my?: number;
-  mt?: number;
-  mb?: number;
-  ml?: number;
-  mr?: number;
-  p?: number;
-  px?: number;
-  py?: number;
-  pt?: number;
-  pb?: number;
-  pl?: number;
-  pr?: number;
 };
 
 export type TBoxProps = Omit<ViewProps, 'style'> &
