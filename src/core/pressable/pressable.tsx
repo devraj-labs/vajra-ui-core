@@ -46,6 +46,7 @@ export const CorePressable = memo(
     pb,
     pl,
     pr,
+    opacity,
     ...rest
   }: TCorePressableProps) => {
     const boxStyleProps = {
@@ -90,7 +91,7 @@ export const CorePressable = memo(
     };
 
     return (
-      <TouchableOpacity style={[buildBoxStyle(boxStyleProps), style]} {...rest}>
+      <TouchableOpacity style={[buildBoxStyle(boxStyleProps), { opacity }, style]} {...rest}>
         {children}
       </TouchableOpacity>
     );

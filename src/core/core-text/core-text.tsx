@@ -16,6 +16,7 @@ export const CoreText = memo(
     align,
     decoration,
     transform,
+    flex,
     ...rest
   }: TTextProps) => (
     <RNText
@@ -30,6 +31,7 @@ export const CoreText = memo(
           textAlign: align,
           textDecorationLine: decoration,
           textTransform: transform,
+          flex,
         },
         style,
       ]}

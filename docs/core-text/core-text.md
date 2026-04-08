@@ -37,7 +37,6 @@ import { CoreText } from '@devraj-labs/vajra-ui-core';
 | `transform` | `TextStyle['textTransform']` | `textTransform` |
 | `style` | `TextStyle \| TextStyle[]` | Merged last |
 | `children` | `React.ReactNode` | Text content |
+| `flex` | `number` | `flex` |
 
 Also accepts all native `TextProps`.
-
-> `CoreText` does **not** accept Box layout props (`flex`, `w`, `h`, etc.). Wrap it in a `Box` when layout control is needed.

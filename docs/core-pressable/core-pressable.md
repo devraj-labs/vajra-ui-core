@@ -37,5 +37,6 @@ Accepts all [`Box` props](../box/box.md) combined with all native `TouchableOpac
 | `onPressOut` | `() => void` | — | Fired when press ends |
 | `onLongPress` | `() => void` | — | Fired on long press |
 | `disabled` | `boolean` | `false` | Prevents interaction |
+| `opacity` | `number` | — | Static opacity of the element |
 | `activeOpacity` | `number` | `0.7` | Opacity while pressed |
 | `style` | `ViewStyle \| ViewStyle[]` | — | Additional styles |

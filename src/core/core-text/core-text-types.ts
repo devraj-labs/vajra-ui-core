@@ -12,4 +12,5 @@ export type TTextProps = Omit<TextProps, 'style'> & {
   transform?: TextStyle['textTransform'];
   style?: TextStyle | TextStyle[];
   children?: React.ReactNode;
+  flex?: number;
 };
