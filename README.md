@@ -60,53 +60,6 @@ yarn add @devraj-labs/vajra-ui-core
 
 ---
 
-## Primitives
-
-| Component | Purpose |
-|-----------|---------|
-| `Box` | Foundation `View` with shorthand layout + spacing props |
-| `Row` | `Box` with `direction="row"` |
-| `Col` | `Box` with `direction="column"` |
-| `Center` | `Box` centered on both axes |
-| `AbsoluteCenter` | Fills parent absolutely and centers children |
-| `Spacer` | Fixed-size gap |
-| `Separator` | Horizontal or vertical divider line |
-| `CoreText` | Headless `Text` with typography props |
-| `CoreTextInput` | Headless `TextInput` with layout + typography props |
-| `CorePressable` | `TouchableOpacity` with full layout prop support |
-| `Grid` | Compound responsive grid — `Grid.Root` + `Grid.Item` |
-| `useDimensions` | Screen-aware dimension utilities |
-
----
-
-## Usage
-
-```tsx
-import { Box, Row, Col, CoreText, CorePressable } from '@devraj-labs/vajra-ui-core';
-
-export function Card() {
-  return (
-    <Box bg="#fff" rounded={12} p={16} gap={12}>
-      <CoreText fontSize={18} fontWeight="600">
-        Hello
-      </CoreText>
-      <Row gap={8} align="center">
-        <Box w={40} h={40} rounded={20} bg="#eee" />
-        <Col gap={2}>
-          <CoreText fontSize={14}>Name</CoreText>
-          <CoreText fontSize={12} color="#888">Subtitle</CoreText>
-        </Col>
-      </Row>
-      <CorePressable bg="#000" rounded={8} py={12} align="center" onPress={() => {}}>
-        <CoreText color="#fff" fontWeight="600">Tap me</CoreText>
-      </CorePressable>
-    </Box>
-  );
-}
-```
-
----
-
 ## Docs
 
 | Component | |
@@ -123,6 +76,128 @@ export function Card() {
 | `CorePressable` | [docs/core-pressable](./docs/core-pressable/core-pressable.md) |
 | `Grid` | [docs/grid](./docs/grid/grid.md) |
 | `useDimensions` | [docs/use-dimensions](./docs/use-dimensions/use-dimensions.md) |
+
+---
+
+## Primitives
+
+### Box
+
+Foundation `View` with shorthand layout and spacing props. Every other layout primitive is built on top of `Box`.
+
+<img src="./docs/box/box-example.png" height="500" />
+
+[Full docs →](./docs/box/box.md)
+
+---
+
+### Row
+
+`Box` with `flexDirection="row"` pre-applied. Use it anywhere you need horizontal layout.
+
+<img src="./docs/row/row-example.png" height="500" />
+
+[Full docs →](./docs/row/row.md)
+
+---
+
+### Col
+
+`Box` with `flexDirection="column"` pre-applied. Stacks children vertically.
+
+<img src="./docs/col/col-example.png" height="500" />
+
+[Full docs →](./docs/col/col.md)
+
+---
+
+### Center
+
+`Box` centered on both axes. No more `alignItems` + `justifyContent` boilerplate.
+
+<img src="./docs/center/center-example.png" height="500" />
+
+[Full docs →](./docs/center/center.md)
+
+---
+
+### AbsoluteCenter
+
+Fills its parent absolutely and centers children. Perfect for overlays, loaders, and empty states.
+
+<img src="./docs/absolute-center/absolute-center-example.png" height="500" />
+
+[Full docs →](./docs/absolute-center/absolute-center.md)
+
+---
+
+### Spacer
+
+Fixed-size gap between elements. Drop it between siblings instead of reaching for `margin`.
+
+<img src="./docs/spacer/spacer-example.png" height="500" />
+
+[Full docs →](./docs/spacer/spacer.md)
+
+---
+
+### Separator
+
+Horizontal or vertical divider line. One prop to switch orientation.
+
+<img src="./docs/separator/separator-example.png" height="500" />
+
+[Full docs →](./docs/separator/separator.md)
+
+---
+
+### CoreText
+
+Headless `Text` with typography shorthand props. Bring your own font and color system.
+
+<img src="./docs/core-text/core-text-example.png" height="500" />
+
+[Full docs →](./docs/core-text/core-text.md)
+
+---
+
+### CoreTextInput
+
+Headless `TextInput` with the same layout and typography props as `CoreText`.
+
+<img src="./docs/core-text-input/core-text-input-example.png" height="500" />
+
+[Full docs →](./docs/core-text-input/core-text-input.md)
+
+---
+
+### CorePressable
+
+`TouchableOpacity` with full layout prop support. Style your buttons without a wrapper `View`.
+
+<img src="./docs/core-pressable/core-pressable-example.png" height="500" />
+
+[Full docs →](./docs/core-pressable/core-pressable.md)
+
+---
+
+### Grid
+
+Compound responsive grid — `Grid.Root` + `Grid.Item`. Adapts to any screen width automatically.
+
+<img src="./docs/grid/grid-example.png" height="500" />
+
+[Full docs →](./docs/grid/grid.md)
+
+---
+
+### useDimensions
+
+Screen-aware dimension utilities. Responsive values without a context provider.
+
+<img src="./docs/use-dimensions/use-dimensions-example.png" height="500" />
+
+[Full docs →](./docs/use-dimensions/use-dimensions.md)
 
 ---
 
